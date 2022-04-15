@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://iili.io/V0k4wP.png",
+        "price": "$5.99"
+    },
+    {
+        "id": "2",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://iili.io/V0krAB.png",
+        "price": "$5.99"
+    },
+    {
+        "id": "3",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://iili.io/V0kg9V.png",
+        "price": "$5.99"
+    },
+    {
+        "id": "4",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://iili.io/V0k6t1.png",
+        "price": "$5.99"
+    },
+    {
+        "id": "5",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://iili.io/V0kioF.png",
+        "price": "$5.99"
+    },
+    {
+        "id": "6",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://iili.io/V0ksMg.png",
+        "price": "$5.99"
+    }
+]

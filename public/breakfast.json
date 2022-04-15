@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Bagle and creame cheese",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://i.ibb.co/pLz8BDQ/breakfast1.png",
+        "price": "$5.99"
+    },
+    {
+        "id": "2",
+        "name": "Breakfast sandwich",
+        "text": "How we dreame about our future",
+        "rating": 4,
+        "img": "https://i.ibb.co/vxvB9vh/breakfast2.png",
+        "price": "$6.99"
+    },
+    {
+        "id": "3",
+        "name": "Backed chicken",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://i.ibb.co/28vWMPW/breakfast3.png",
+        "price": "$9.99"
+    },
+    {
+        "id": "4",
+        "name": "Eggs Benedict",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://i.ibb.co/wz1x8hs/breakfast4.png",
+        "price": "$10.99"
+    },
+    {
+        "id": "5",
+        "name": "Toast Croissant Fried egg",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://i.ibb.co/nw1Fdzt/breakfast5.png",
+        "price": "$3.99"
+    },
+    {
+        "id": "1",
+        "name": "Full Breakfast Frid Egg Toast Brunch",
+        "text": "How we dreame about our future",
+        "rating": 5,
+        "img": "https://i.ibb.co/BPrXWdk/breakfast6.png",
+        "price": "$19.99"
+    }
+]
