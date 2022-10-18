@@ -1,7 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import swal from 'sweetalert';
+import { CartContext } from '../../../App';
 
 const Dinner = () => {
     const [Dinners, setDinner] = useState([]);
+    const [carts, setcart] = useContext(CartContext);
+    const addToCart = (meal) => {
+        if (carts.includes(meal) === !1) {
+            const newCart = [...carts, meal];
+            setcart(newCart)
+        }
+
+        else {
+            swal("Opps!", "already added!", "warning");
+        }
+    }
     useEffect(() => {
         fetch('dinner.json')
             .then(res => res.json())
@@ -13,7 +26,7 @@ const Dinner = () => {
                 <div className="container px-5 py-10 mx-auto">
                     <div className="flex flex-wrap m-4">
                         {
-                            Dinners.map(dinner => <FetchDinner dinner={dinner}></FetchDinner>)
+                            Dinners.map(dinner => <FetchDinner dinner={dinner} addToCart={addToCart}></FetchDinner>)
                         }
                     </div>
                 </div>
@@ -23,7 +36,7 @@ const Dinner = () => {
 };
 
 
-const FetchDinner = ({ dinner }) => {
+const FetchDinner = ({ dinner, addToCart }) => {
     // console.log(lunch)
     const { name, rating, price, text, img } = dinner;
     return (
@@ -38,6 +51,7 @@ const FetchDinner = ({ dinner }) => {
                     <p className="leading-relaxed mb-3">{text}</p>
                     <p>⭐⭐⭐⭐⭐</p>
                     <h2 className=" text-3xl title-font font-medium text-gray-400 mb-1">{price}</h2>
+                    <button onClick={() => addToCart(dinner)} class="mt-4 button button--aylen px-5 py-3 text-white bg-red-400 hover:bg-red-500 hover:text-white block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest overflow-hidden">add cart 🛒</button>
                 </div>
             </div>
         </div>

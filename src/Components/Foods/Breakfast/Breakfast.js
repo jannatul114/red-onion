@@ -1,7 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import swal from 'sweetalert';
+import { CartContext } from '../../../App';
 
 const Breakfast = () => {
     const [breakfasts, setBreakfast] = useState([]);
+    const [carts, setcart] = useContext(CartContext);
+    const addToCart = (meal) => {
+        if (carts.includes(meal) === !1) {
+            const newCart = [...carts, meal];
+            setcart(newCart)
+        }
+
+        else {
+            swal("Opps!", "already added!", "warning");
+        }
+    }
     useEffect(() => {
         fetch('breakfast.json')
             .then(res => res.json())
@@ -13,7 +26,7 @@ const Breakfast = () => {
                 <div className="container px-5 py-10 mx-auto">
                     <div className="flex flex-wrap m-4">
                         {
-                            breakfasts.map(breaks => <FetchBreakfast breaks={breaks}></FetchBreakfast>)
+                            breakfasts.map(breaks => <FetchBreakfast breaks={breaks} addToCart={addToCart}></FetchBreakfast>)
                         }
                     </div>
                 </div>
@@ -22,7 +35,7 @@ const Breakfast = () => {
     );
 };
 
-const FetchBreakfast = ({ breaks }) => {
+const FetchBreakfast = ({ breaks, addToCart }) => {
     const { name, rating, price, text, img } = breaks;
     return (
 
@@ -35,7 +48,8 @@ const FetchBreakfast = ({ breaks }) => {
 
                     <p className="leading-relaxed mb-3">{text}</p>
                     <p>⭐⭐⭐⭐⭐</p>
-                    <h2 className=" text-3xl title-font font-medium text-gray-400 mb-1">{price}</h2>
+                    <h2 className=" text-3xl title-font font-medium text-gray-400 color-white mb-1">{price}</h2>
+                    <button onClick={() => addToCart(breaks)} class="mt-4 button button--aylen px-5 py-3 text-white bg-red-400 hover:bg-red-500 hover:text-white block focus:outline-none border-2 border-solid rounded-lg text-sm text-center font-semibold uppercase tracking-widest overflow-hidden">add cart 🛒</button>
                 </div>
             </div>
         </div>
